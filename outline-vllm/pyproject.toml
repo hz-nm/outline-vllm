@@ -1,0 +1,20 @@
+[project]
+name = "outline-vllm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "openai>=1.52.0",
+    "torch>=2.5.0",
+    "transformers>=4.45.2",
+    "datasets>=2.14.4",
+    "accelerate>=1.0.1",
+    "llama-cpp-python>=0.3.1",
+    "vllm",
+    "outlines",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
