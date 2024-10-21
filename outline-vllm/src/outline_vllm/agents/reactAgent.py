@@ -38,12 +38,12 @@ class FinalAnswer(BaseModel):
 class Decision(BaseModel):
     Decision: Union[ReasonAndAct, FinalAnswer]
     
-
-def getRegexSchema():
-    json_schema = Decision.model_json_schema()
-    schema_str = convert_json_schema_to_str(json_schema=json_schema)
-    regex_str = build_regex_from_schema(schema_str)
-    print(regex_str)
+# TODO IMPROVE ON THIS!!!
+# def getRegexSchema():
+json_schema = Decision.model_json_schema()
+schema_str = convert_json_schema_to_str(json_schema=json_schema)
+regex_str = build_regex_from_schema(schema_str)
+# print(regex_str)
     # '\\{[ ]?"Decision"[ ]?:[ ]?(\\{[ ]?"Scratchpad"[ ]?:[ ]?"([^"\\\\\\x00-\\x1F\\x7F-\\x9F]|\\\\["\\\\])*"[ ]?,[ ]?"Thought"[ ]?:[ ]?"([^"\\\\\\x00-\\x1F\\x7F-\\x9F]|\\\\["\\\\])*"[ ]?,[ ]?"Action"[ ]?:[ ]?("wikipedia"|"calculate")[ ]?,[ ]?"Action_Input"[ ]?:[ ]?"([^"\\\\\\x00-\\x1F\\x7F-\\x9F]|\\\\["\\\\])*"[ ]?\\}|\\{[ ]?"Scratchpad"[ ]?:[ ]?"([^"\\\\\\x00-\\x1F\\x7F-\\x9F]|\\\\["\\\\])*"[ ]?,[ ]?"Final_Answer"[ ]?:[ ]?"([^"\\\\\\x00-\\x1F\\x7F-\\x9F]|\\\\["\\\\])*"[ ]?\\})[ ]?\\}'
     
     

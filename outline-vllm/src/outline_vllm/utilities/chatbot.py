@@ -1,4 +1,6 @@
 from outlines import generate
+from loadModel import model
+from agents.reactAgent import regex_str
 
 class ChatBot:
     def __init__(self, prompt=""):
